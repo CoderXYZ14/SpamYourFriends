@@ -1,4 +1,4 @@
-import java.awt.AWTException;
+    import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -15,18 +15,19 @@ public class Spammer {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter your text:");
-        String Text = scanner.nextLine();
+        String Text = "I LUV U \u1F60D";
 
         StringSelection stringSelection = new StringSelection(Text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
 
         System.out.println("The spamming will start in 5 seconds");
+        
         Thread.sleep(5000);
 
-        while(x <= 50) {
+        while(x <= 10) {
 
-            Thread.sleep(1000);
+            Thread.sleep(500);
 
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
@@ -39,7 +40,7 @@ public class Spammer {
             x++;
 
         }
-
+        scanner.ioException();
     }
 
 }
